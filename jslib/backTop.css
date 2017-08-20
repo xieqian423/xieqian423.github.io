@@ -1,0 +1,46 @@
+.swicth-sections{height:100%;box-sizing: border-box}
+.section{
+    width:100%;
+    height:100%;
+    box-sizing: border-box
+}
+
+.swicth-controls{
+    position:absolute;
+    list-style:none;
+}
+.swicth-controls li{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#fff;
+    cursor: pointer;
+}
+.vertical{
+    right:10px;
+    top:50%;
+}
+.vertical li{
+    margin:4px auto;
+}
+
+.horizontal{
+    bottom:10px;
+    width: 100%;
+    text-align: center;
+}
+
+.horizontal li{
+    display:inline-block;
+    vertical-align:middle;
+    margin: 4px;
+    background:#333;
+}
+.swicth-controls .active{
+    width:12px;
+    height:12px;
+    border:2px solid #00a78e;
+}
+
+/*$main-color:#00a78e;*/
+/*$even-bcolor:#333;*/

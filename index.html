@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/resume.css">
+    <link rel="stylesheet" type="text/css" href="jslib/pageswicth.css">
+    <link rel="stylesheet" type="text/css" href="css/resume_m.css" media="only screen and (max-width: 450px)">
+    <title>谢倩-简历</title>
+    <style>
+
+        .info-container{
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+            animation-name: bounce;
+        }
+
+        @keyframes bounce {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(.3);
+                -ms-transform: scale(.3);
+                transform: scale(.3);
+            }
+            50% {
+                opacity: 1;
+                -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                transform: scale(1.05);
+            }
+            70% {
+                -webkit-transform: scale(.9);
+                -ms-transform: scale(.9);
+                transform: scale(.9);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="page information" id="information">
+    <div class="transparentbg">
+    <div class="info-container">
+        <div class="left">
+            <img src="images/me.jpg" width="120px">
+        </div>
+        <div class="right">
+            <div>
+                <div class="tag">基本信息</div>
+                <div class="triangle"></div>
+            </div>
+            <span class="myname">I'm XIE QIAN</span>
+            <ul class="info">
+                <li><span class="title">出生年月</span><span class="cell">1992.03</span></li>
+                <li><span class="title">籍&nbsp;&nbsp;贯</span><span class="cell">湖北襄阳</span></li>
+                <li><span class="title">性&nbsp;&nbsp;别</span><span class="cell">女</span></li>
+                <li><span class="title">政治面貌</span><span class="cell">中共党员</span></li>
+                <li><span class="title">电&nbsp;&nbsp;话</span><span class="cell">13125116027</span></li>
+                <li><span class="title">邮&nbsp;&nbsp;箱</span><span class="cell">xieqian423@qq.com</span></li>
+                <li><span class="title">GitHub</span><span class="cell">https://github.com/xieqian423/</span></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="page education" id="education"></div>
+<div class="page skills" id="skills"></div>
+<div class="page experience" id="experience"></div>
+<div class="page" id="service"></div>
+<div class="page" id="activity"></div>
+<div class="page" id="contact"></div>
+
+<div class="top_menu" id="menu"></div>
+<a class="btn-backtop">
+    <div class="arrow"></div>
+</a>
+<script src="jslib/backTop.js"></script>
+<script src="js/init/util.js"></script>
+<script src="jslib/PageSwicth.js"></script>
+<script src="js/util/canvas.js"></script>
+<script src="js/init/InitSys.js"></script>
+</body>
+</html>

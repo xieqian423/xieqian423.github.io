@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <title></title>
+    <style type="text/css">
+        html{
+            background:url("../images/background.jpg") no-repeat;
+            background-size: 100%;
+            -webkit-background-size: 100% auto;
+        }
+        body{
+            background:rgba(0,0,0,0.6);
+            color:gainsboro;
+        }
+
+        .fix:after,.fix:before{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .info-container{
+            width:60%;
+            margin:auto;
+            background:rgba(211,211,211,0.2);  /*背景透明，文字不透明*/
+            overflow:hidden; /*清除浮动带来的影响*/
+            left:50%;top:50%;
+            transform:translate(0,50%);
+        }
+
+        .info-container .left,.info-container  .right{
+            float: left;
+            padding:2em;
+            box-sizing: border-box;
+        }
+        .info-container  .left{
+            width:30%;
+            text-align:center;
+        }
+        .info-container  .right{
+            width:70%;
+        }
+
+        .info-container  img{
+            vertical-align:middle;
+        }
+
+        .info-container .info{
+            border-top:4px solid #99FF99;
+            width:90%;
+        }
+        .info-container .info li{
+            margin-top: 5px;
+        }
+        ul li .title{
+            font-size:18px;
+            display:inline-block;
+            width: 100px;
+        }
+
+        .triangle{
+            position:absolute;
+            margin-left:15px;
+            width:0px;
+            height:0px;
+            border:6px solid;
+            border-color:#FF9900 transparent transparent transparent;
+        }
+
+        @media screen and (max-width:450px) {
+            .info-container{
+                width:100%;
+                overflow: visible;
+            }
+            .info-container  .left,.info-container  .right{
+                width:100%;
+            }
+
+            .info-container  .right ul{width:100%}
+            .info-container  .right ul>li:last-child{display:none;}
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="info-container">
+        <div class="left">
+            <img src="../images/002.jpg" width="120px">
+        </div>
+        <div class="right">
+            <div>
+                <div style="width:100px;line-height:30px;text-align:center;background:#FF9900">基本信息</div>
+                <div class="triangle"></div>
+            </div>
+            <ul class="info">
+                <li><span class="title">出生年月</span><span class="cell">1992.03</span></li>
+                <li><span class="title">籍&nbsp;&nbsp;贯</span><span class="cell">湖北襄阳</span></li>
+                <li><span class="title">性&nbsp;&nbsp;别</span><span class="cell">女</span></li>
+                <li><span class="title">政治面貌</span><span class="cell">中共党员</span></li>
+                <li><span class="title">电&nbsp;&nbsp;话</span><span class="cell">13125116027</span></li>
+                <li><span class="title">邮&nbsp;&nbsp;箱</span><span class="cell">xieqian423@qq.com</span></li>
+                <li><span class="title">GitHub</span><span class="cell">https://github.com/xieqian423/</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script type="text/jsx">
+        var page1 = React.createClass({
+            render: function(){
+                return (
+                    <div></div>
+                );
+            }
+        });
+    </script>
+</body>
+</html>

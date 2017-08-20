@@ -1,0 +1,210 @@
+@import "mixin";
+
+*{margin:0; padding:0}
+
+$main-color:#00a78e;
+$even-bcolor:#333;
+
+.top_menu{display:none}
+
+.page{
+  .page-title{
+    height:12%;
+  };
+  .page-content{
+    height:80%;
+    padding:1rem 1.5rem;
+  }
+}
+
+  .information {
+    .info-container {
+      width:100%;
+      height:100%;
+      flex-direction: column;
+
+      .left, .right {
+        background: rgba(211, 211, 211, 0.2)
+      }
+
+      .left{padding:0}
+      .right ul {
+        //width: 100%;
+        font-size:16px;
+        li:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .education{
+    .edu{
+      width: 100%;
+      .list-item{
+        padding:20px 0;
+        .title{
+          width:100%;
+          border-left:0;
+          border-bottom:1px dashed $even-bcolor;
+          h4,h6{
+            display:inline-block;
+          };
+          h6{
+            float:left;
+          };
+        };
+        .content{
+          width:100%;
+          margin-top:8px;
+        };
+      };
+    };
+  };
+
+
+
+  .skill {
+    display:flex;
+    flex-direction: column;
+    .list{
+      margin-top: 1rem;
+    }
+    .left{
+      flex-grow: 1;
+      padding:0.5rem 0;
+      h5{margin:5px;};
+      .list-item{height:20px;}
+    }
+    .right{
+      flex-grow: 1;
+      padding:0.5rem 0;
+      .lists{
+        transform: translate(0,0);
+        flex-wrap:nowrap;
+        .list-item{
+          width:100px;
+          height:100px;
+          justify-content:space-between;
+        }
+      }
+    }
+  }
+  .skill .left, .skill .right {width:100%;}
+
+
+
+.experience{
+  .page-content{
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+    .left,.right{
+      width:100%;
+    };
+    .left{
+      padding:0 1rem;
+      border-right:0;
+      h3{display:none}
+      .lists{
+        padding:0;
+        .list-item{
+          margin-top:0.5rem;
+          .item-time{
+            display:block;
+            float:left;
+          }
+          .item-intro{
+            h4{margin-left: 5rem;}
+            display:block;
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .right{
+      .container{
+        width:100%;
+        height:100%;
+        position:relative;
+
+        .section{
+          padding:5px;
+          margin-top:1px;
+          h4{text-align:center}
+          ul{margin-top:1rem}
+          li{
+            margin-top:5px;
+            p::before{
+              font-size:16px;
+            }
+          }
+        }
+      }
+    }
+  };
+}
+
+.service {
+  width: 100%;
+  height: 100%;
+  @include center(false);
+  margin: 0;
+
+  .list-item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    margin-left:0;
+    .icon {
+      width:2.5rem;
+      .iconfont {font-size: 32px; }
+    }
+    .content {
+      float:none;
+      width:auto;
+      margin-left:2.5rem;
+      padding:0;
+    }
+  }
+}
+
+  .act{
+    padding-top: 0;
+    .right{
+      width:100%;
+      margin: 0;
+    };
+    .list-item {
+      height: 25%;
+      margin-top: 0.5em;
+      .content-box{display:none};
+      .content {
+        width: 90%;
+        height:auto;
+        margin-left: 2em;
+        box-sizing: border-box;
+        border-bottom-width: 3px;
+      }
+      .icon {
+        margin-left: -16px;
+        .iconfont {font-size: 32px;};
+      }
+    };
+
+  }
+
+.contact{
+  .lists{
+    flex-direction: column;
+    margin:0;
+    width:100%;
+    @include center(false);
+
+    .list-item{
+      margin:0.5rem;
+      height:120px;
+    }
+  }
+}

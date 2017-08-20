@@ -1,0 +1,62 @@
+@mixin animation($name){
+  animation: $name;
+  -webkit-animation:$name;
+  -moz-animation: $name;
+  -o-animation: $name;
+}
+
+@mixin transform($para){
+  transform: $para;
+  -webkit-transform: $para;
+  -moz-transform: $para;
+  -ms-transform: $para;
+  -o-transform: $para;
+}
+
+@mixin translate($name){
+  transition:$name ;
+  -webkit-transform: $name;
+  -moz-transition: $name;
+  -o-transition: $name;
+}
+
+
+@mixin center($boolean:true){
+  @if $boolean{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+  }
+
+  @else {
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    position: static;
+  }
+}
+
+@mixin center_ab($boolean:true){
+  @if $boolean{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+  }
+
+  @else {
+
+  }
+}
+
+/*三条杠的图标*/
+@mixin threeBar($w:60px, $h:10px, $color:black){
+  width:$w;
+  height:$h;
+  border-top:3 * $h double;
+  border-bottom:$h solid;
+  border-color:$color;
+}
+

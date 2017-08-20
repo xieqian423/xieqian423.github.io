@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/*三条杠的图标*/
+/*悬停动画按钮，切换页面*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+p {
+  color: #586371; }
+
+.fix:after, .fix:before {
+  content: '';
+  display: table;
+  clear: both; }
+
+/*个人信息*/
+.information {
+  background: url("../images/background.jpg") no-repeat;
+  background-size: 100%;
+  -webkit-background-size: 100% auto;
+  color: gainsboro; }
+  .information .myname {
+    letter-spacing: 3px; }
+  .information .transparentbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .information .info-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    height: 55%;
+    width: 70%;
+    margin: auto;
+    background: rgba(211, 211, 211, 0.2);
+    /*背景透明，文字不透明*/
+    display: flex;
+    /*清除浮动带来的影响*/ }
+    .information .info-container .left {
+      flex-grow: 2;
+      text-align: center; }
+      .information .info-container .left img {
+        vertical-align: middle;
+        margin-top: 2.5rem; }
+    .information .info-container .right {
+      flex-grow: 3; }
+      .information .info-container .right .tag {
+        width: 100px;
+        line-height: 30px;
+        text-align: center;
+        background: #00a78e; }
+      .information .info-container .right .myname {
+        display: block;
+        padding: 2px; }
+      .information .info-container .right .info {
+        border-top: 1px solid #c7c7c7;
+        width: 90%;
+        margin-top: 8px; }
+        .information .info-container .right .info li {
+          margin-top: 5px; }
+        .information .info-container .right .info .title {
+          font-size: 18px;
+          display: inline-block;
+          width: 100px; }
+
+.info-container .left, .info-container .right {
+  float: left;
+  padding: 2em;
+  box-sizing: border-box; }
+
+.triangle {
+  position: absolute;
+  margin-left: 15px;
+  width: 0px;
+  height: 0px;
+  border: 6px solid;
+  border-color: #00a78e transparent transparent transparent; }
+
+/*教育*/
+.education {
+  background: #f3f2f2; }
+
+.education ul {
+  width: 60%;
+  margin: auto; }
+.education h1, .education h2, .education h3, .education h4, .education h5, .education h6 {
+  margin: 2px; }
+.education .edu .list-item {
+  overflow: hidden;
+  padding: 30px 20px; }
+  .education .edu .list-item .title, .education .edu .list-item .content {
+    float: left; }
+  .education .edu .list-item .title {
+    width: 20%;
+    padding-left: 10px;
+    border-left: 5px solid #333; }
+  .education .edu .list-item .content {
+    width: 70%; }
+  .education .edu .list-item h4 {
+    font-family: 'Gidugu', sans-serif; }
+  .education .edu .list-item h5, .education .edu .list-item h6 {
+    color: #00a78e;
+    font-family: 'Gidugu', sans-serif; }
+
+/*技能*/
+.skill {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+  .skill .left, .skill .right {
+    width: 50%;
+    padding: 5%;
+    box-sizing: border-box; }
+    .skill .left h4, .skill .right h4 {
+      opacity: 0.7;
+      letter-spacing: 2px; }
+    .skill .left h5, .skill .right h5 {
+      color: #586371; }
+    .skill .left .iconfont, .skill .right .iconfont {
+      font-style: italic;
+      font-size: 32px; }
+  .skill .left .list-item {
+    width: 100%;
+    height: 25px;
+    background: #fff; }
+    .skill .left .list-item .level {
+      height: 100%;
+      background: #00a78e; }
+  .skill .right .lists {
+    display: flex;
+    flex-direction: row;
+    transform: translate(0, 50%); }
+  .skill .right .list-item {
+    width: 160px;
+    height: 160px; }
+
+/*经验*/
+.experience .page-content {
+  display: flex;
+  flex-direction: row; }
+  .experience .page-content h4 {
+    color: #00a78e; }
+  .experience .page-content .left {
+    width: 50%;
+    height: 100%;
+    border-right: 3px solid #ccc;
+    box-sizing: border-box; }
+    .experience .page-content .left h3 {
+      text-align: center; }
+    .experience .page-content .left .lists {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem; }
+      .experience .page-content .left .lists .list-item .item-time {
+        width: 20%;
+        display: inline-block;
+        vertical-align: top; }
+      .experience .page-content .left .lists .list-item .item-intro {
+        width: 75%;
+        display: inline-block; }
+  .experience .page-content .right {
+    width: 50%; }
+    .experience .page-content .right .container {
+      width: 80%;
+      height: 80%;
+      position: relative;
+      margin: auto; }
+      .experience .page-content .right .container .section {
+        padding: 30px; }
+        .experience .page-content .right .container .section ul {
+          margin-top: 3rem; }
+        .experience .page-content .right .container .section h4 {
+          text-align: center; }
+        .experience .page-content .right .container .section li {
+          margin-top: 10px; }
+          .experience .page-content .right .container .section li p::before {
+            content: "★ ";
+            color: #00a78e;
+            font-size: 24px; }
+
+/*服务*/
+.service {
+  width: 80%;
+  height: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative; }
+  .service .list-item {
+    width: 40%;
+    height: 45%;
+    float: left;
+    overflow: hidden;
+    margin-left: 5%; }
+    .service .list-item:hover .icon {
+      color: #00a78e; }
+    .service .list-item .icon {
+      color: #fff;
+      float: left;
+      width: 25%; }
+    .service .list-item .content {
+      float: left;
+      width: 70%;
+      padding-left: 5%;
+      box-sizing: border-box; }
+
+/**活动**/
+.act .left {
+  float: right; }
+.act .right {
+  width: 60%;
+  float: right;
+  border-left: 1px solid #ccc; }
+
+.act .left {
+  margin-right: 3rem; }
+  .act .left .time {
+    display: block;
+    line-height: 2.5rem;
+    width: 150px;
+    text-align: right;
+    padding-right: 4px;
+    background: #333;
+    color: #fff; }
+.act .list-item {
+  margin-top: 15px; }
+
+.act .list-item .icon {
+  position: absolute;
+  margin-left: -24px;
+  color: #969896; }
+  .act .list-item .icon .iconfont {
+    font-size: 48px; }
+.act .list-item .content-box {
+  position: absolute;
+  margin-left: -15%;
+  padding: 10px;
+  box-sizing: border-box; }
+  .act .list-item .content-box .time {
+    display: block;
+    line-height: 2.5rem;
+    width: 150px;
+    text-align: right;
+    padding-right: 4px;
+    background: #333;
+    color: #fff; }
+.act .list-item .content {
+  width: 60%;
+  height: 6.5rem;
+  position: relative;
+  margin-left: 15%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-bottom: 5px solid #00a78e;
+  box-shadow: 2px 0px #ccc;
+  box-sizing: border-box; }
+  .act .list-item .content:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -32px;
+    top: 15px;
+    border: 16px solid transparent;
+    border-right: 16px solid #ccc; }
+  .act .list-item .content:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -30px;
+    top: 15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #fff; }
+
+.page:last-child {
+  background: #fff; }
+
+.contact {
+  width: 100%;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative; }
+  .contact .lists {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 80%;
+    color: #00a78e;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: relative; }
+    .contact .lists .list-item {
+      flex-grow: 1;
+      margin: 0 1.5rem;
+      border-radius: 4px;
+      background: #fff;
+      height: 180px; }
+      .contact .lists .list-item:hover {
+        box-shadow: 3px 4px 10px 2px rgba(200, 200, 200, 0.5); }
+      .contact .lists .list-item .content {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: relative; }
+        .contact .lists .list-item .content span {
+          line-height: 2rem;
+          display: block; }
+          .contact .lists .list-item .content span .iconfont {
+            font-size: 32px; }
+        .contact .lists .list-item .content h4 {
+          line-height: 2rem; }

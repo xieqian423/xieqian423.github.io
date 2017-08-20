@@ -1,0 +1,377 @@
+@import "mixin";
+/*悬停动画按钮，切换页面*/
+html,body{margin:0; padding:0; height:100%;}
+p{
+    color:#586371;
+}
+
+.fix:after,.fix:before{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+$main-color:#00a78e;
+$even-bcolor:#333;
+
+/*个人信息*/
+.information{
+  .myname{
+    letter-spacing:3px;
+  }
+  .transparentbg{
+    width:100%;height:100%;background-color:rgba(0,0,0,0.6);
+  };
+  background:url("../images/background.jpg") no-repeat;
+  background-size: 100%;
+  -webkit-background-size: 100% auto;
+  color:gainsboro;
+  .info-container{
+    @include center_ab(true);
+    height: 55%;
+    width:70%;
+    margin:auto;
+    background:rgba(211,211,211,0.2);  /*背景透明，文字不透明*/
+    display:flex; /*清除浮动带来的影响*/
+
+    .left{
+      flex-grow:2;
+      text-align:center;
+      img{
+        vertical-align:middle;
+        margin-top: 2.5rem;
+      };
+    };
+
+    .right{
+      flex-grow:3;
+      .tag{
+        width:100px;line-height:30px;text-align:center;background:$main-color
+      }
+      .myname{
+        display:block;
+        padding:2px;
+      }
+      .info{
+        border-top:1px solid #c7c7c7;
+        width:90%;
+        margin-top: 8px;
+        li{
+          margin-top: 5px;
+        };
+        .title{
+          font-size:18px;
+          display:inline-block;
+          width: 100px;
+        }
+      }
+    }
+  };
+
+}
+
+.info-container .left,.info-container  .right{
+  float: left;
+  padding:2em;
+  box-sizing: border-box;
+}
+
+
+.triangle{
+  position:absolute;
+  margin-left:15px;
+  width:0px;
+  height:0px;
+  border:6px solid;
+  border-color:$main-color transparent transparent transparent;
+}
+
+/*教育*/
+.education{background:#f3f2f2}
+.education{
+  ul{width:60%;margin:auto};
+  h1,h2,h3,h4,h5,h6{margin:2px;};
+  .edu .list-item{
+    overflow: hidden;
+    padding:30px 20px;
+
+    .title,.content{
+      float:left;
+    };
+
+    .title{
+      width:20%;
+      padding-left:10px;
+      border-left:5px solid $even-bcolor;
+    };
+
+    .content{width:70%;};
+    h4{font-family:'Gidugu', sans-serif};
+    h5,h6{color:$main-color;font-family:'Gidugu', sans-serif}
+  }
+}
+
+
+/*技能*/
+.skill{
+  display: flex;
+  flex-direction: row;
+  height:100%;
+  .left, .right {
+    h4{
+      opacity: 0.7;
+      letter-spacing: 2px;
+    }
+    h5{color:#586371};
+    width: 50%;
+    padding: 5%;
+    box-sizing: border-box;
+    .iconfont {
+      font-style: italic;
+      font-size: 32px;
+    };
+    .lists{
+
+    }
+  };
+
+  .left{
+    .list-item{
+      width: 100%;
+      height: 25px;
+      background: #fff;
+      .level {
+        height: 100%;
+        background: #00a78e;
+      };
+    }
+  }
+
+  .right{
+    .lists{
+      display:flex;
+      flex-direction: row;
+      transform: translate(0,50%);
+    }
+    .list-item{
+      width:160px;
+      height:160px;
+    }
+  }
+}
+
+
+
+/*经验*/
+.experience {
+  .page-content{
+    h4{color: $main-color}
+    display:flex;
+    flex-direction:row;
+    .left {
+      width:50%;
+      height:100%;
+      border-right: 3px solid #ccc;
+      box-sizing: border-box;
+      h3{text-align:center}
+      .lists{
+        display: flex;
+        flex-direction:column;
+        padding: 2rem;
+        .list-item{
+          .item-time{
+            width: 20%;
+            display: inline-block;
+            vertical-align: top;
+          }
+          .item-intro{
+            width: 75%;
+            display: inline-block;
+            //h4{margin:0}
+          }
+        }
+      }
+    };
+    .right{
+      width:50%;
+      .container{
+        width:80%;
+        height:80%;
+        position:relative;
+        margin: auto;
+        .section{
+          padding:30px;
+          ul{margin-top:3rem;};
+          h4{text-align:center}
+          li{
+            margin-top:10px;
+            p::before{
+              content:"★ ";
+              color:$main-color;
+              font-size:24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+/*服务*/
+.service {
+  width: 80%;
+  height: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  @include center(true);
+
+  .list-item {
+    width: 40%;
+    height:45%;
+    float: left;
+    overflow: hidden;
+    margin-left: 5%;
+    &:hover .icon {color: #00a78e;}
+    .icon {
+      color: #fff;
+      float: left;
+      width: 25%;
+    }
+
+    .content {
+      float: left;
+      width: 70%;
+      padding-left: 5%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+/**活动**/
+.act {
+  .left{
+    float: right;
+  }
+  .right{
+    width: 60%;
+    float: right;
+    border-left: 1px solid #ccc;
+  }
+}
+
+.act {
+  .left{
+    margin-right:3rem;
+    .time{
+      display:block;
+      line-height:2.5rem;
+      width:150px;
+      text-align:right;
+      padding-right:4px;
+      background: $even-bcolor;
+      color:#fff;
+    }
+  }
+  .list-item {
+    margin-top: 15px;
+  }
+}
+.act .list-item{
+  .icon {
+    position: absolute;
+    margin-left: -24px;
+    color: #969896;
+    .iconfont {font-size: 48px; };
+  };
+  .content-box{
+    position: absolute;
+    margin-left: -15%;
+    padding: 10px;
+    box-sizing: border-box;
+    .time{
+      display:block;
+      line-height:2.5rem;
+      width:150px;
+      text-align:right;
+      padding-right:4px;
+      background: $even-bcolor;
+      color:#fff;
+    }
+  }
+  .content {
+    width: 60%;
+    height: 6.5rem;
+    position: relative;
+    margin-left: 15%;
+    padding:1rem;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #00a78e;
+    box-shadow: 2px 0px #ccc;
+    box-sizing:border-box;
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -32px;
+      top: 15px;
+      border: 16px solid transparent;
+      border-right: 16px solid #ccc;
+    };
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -30px;
+      top: 15px;
+      border: 15px solid transparent;
+      border-right: 15px solid #fff;
+    }
+  }
+}
+
+
+.page:last-child{
+  background:#fff;
+}
+.contact{
+  width:100%;
+  box-sizing:border-box;
+  @include center(true);
+
+  .lists{
+    display:flex;
+    flex-direction: row;
+    text-align:center;
+    width:80%;
+    color:$main-color;
+    @include center(true);
+
+    .list-item{
+      flex-grow:1;
+      margin: 0 1.5rem;
+      border-radius:4px;
+      background: #fff;
+      height:180px;
+      &:hover{
+        box-shadow:3px 4px 10px 2px rgba(200,200,200,0.5);
+      }
+
+      .content{
+        @include center(true);
+        span{
+          line-height:2rem;
+          display:block;
+          .iconfont{
+            font-size:32px;
+          }
+        };
+        h4{
+          line-height:2rem;
+        }
+      }
+    }
+  }
+}
+
